@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leela's Sweets & Restaurant</title>
+  <meta name="description" content="Leela's Sweets & Restaurant — Where Tradition Meets Taste. South Indian, Chinese, Snacks, Bihar Specials, Sweets & Coffee. Order online, book tables, and enjoy authentic flavors." />
+  <meta name="theme-color" content="#b45309" />
+  <meta property="og:title" content="Leela's Sweets & Restaurant" />
+  <meta property="og:description" content="Taste Tradition. Love Variety. Multi-cuisine restaurant with Bihar specials and fresh sweets." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=60" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-wrap">
+      <div class="brand">Leela's Sweets & Restaurant</div>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="links">☰ Menu</button>
+      <div class="links" id="links" role="navigation">
+        <a href="#home">Home</a>
+        <a href="#filters">Menu</a>
+        <a href="#sweets">Sweets</a>
+        <a href="#bihar">Bihar Specials</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="home">
+    <div class="container">
+      <h1>Taste Tradition. Love Variety.</h1>
+      <p>South Indian • Chinese • Snacks • Bihar Specials • Sweets & Coffee</p>
+      <div class="cta-row">
+        <a class="btn" href="#filters" aria-label="View Menu">View Menu</a>
+        <a class="btn alt" href="#contact" aria-label="Reserve a table">Reserve Table</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH + FILTERS -->
+  <section id="filters" class="filters">
+    <div class="container">
+      <div class="filters-wrap">
+        <input type="search" id="searchBar" placeholder="Search dishes..." aria-label="Search dishes" />
+        <div class="chip-row" id="chipRow" role="tablist" aria-label="Category filters">
+          <!-- chips injected by JS -->
+        </div>
+      </div>
+      <small class="muted">Tip: Use search + category chips together.</small>
+    </div>
+  </section>
+
+  <!-- MENU SECTIONS -->
+  <main>
+    <section id="south">
+      <div class="container">
+        <h2>South Indian</h2>
+        <div class="grid cols-3" data-section="south"></div>
+      </div>
+    </section>
+
+    <section id="chinese">
+      <div class="container">
+        <h2>Chinese</h2>
+        <div class="grid cols-3" data-section="chinese"></div>
+      </div>
+    </section>
+
+    <section id="snacks">
+      <div class="container">
+        <h2>Snacks & Coffee</h2>
+        <div class="grid cols-3" data-section="snacks"></div>
+      </div>
+    </section>
+
+    <section id="bihar">
+      <div class="container">
+        <div class="title-row">
+          <h2>Bihar Specials</h2>
+          <span class="tag">Signature</span>
+        </div>
+        <div class="grid cols-3" data-section="bihar"></div>
+      </div>
+    </section>
+
+    <section id="mainVeg">
+      <div class="container">
+        <h2>Main Course (Veg)</h2>
+        <div class="grid cols-3" data-section="mainVeg"></div>
+      </div>
+    </section>
+
+    <section id="mainNonVeg">
+      <div class="container">
+        <h2>Main Course (Non‑Veg)</h2>
+        <div class="grid cols-3" data-section="mainNonVeg"></div>
+      </div>
+    </section>
+
+    <section id="breadsRice">
+      <div class="container">
+        <h2>Breads & Rice</h2>
+        <div class="grid cols-3" data-section="breadsRice"></div>
+      </div>
+    </section>
+
+    <section id="sweets">
+      <div class="container">
+        <h2>Sweets & Mithai</h2>
+        <div class="grid cols-3" data-section="sweets"></div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="grid cols-3">
+          <img src="https://images.unsplash.com/photo-1604908554027-9423c94bf915?auto=format&fit=crop&w=900&q=60" alt="Traditional Indian thali" />
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=60" alt="Chinese noodles in a bowl" />
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=60" alt="Assorted Indian sweets" />
+          <img src="https://images.unsplash.com/photo-1555243896-c709bfa0b564?auto=format&fit=crop&w=900&q=60" alt="Dosa being served" />
+          <img src="https://images.unsplash.com/photo-1604908176997-4312d10a2f5b?auto=format&fit=crop&w=900&q=60" alt="Spicy chicken curry" />
+          <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=60" alt="Restaurant ambience" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / RESERVATIONS -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact & Reservations</h2>
+        <div class="grid cols-2">
+          <div class="card"><div class="pad">
+            <form id="reserveForm" aria-label="Reservation form">
+              <div class="form-grid">
+                <div><label>Name<input required name="name" autocomplete="name" /></label></div>
+                <div><label>Phone<input required name="phone" inputmode="tel" autocomplete="tel" /></label></div>
+                <div><label>Date<input required type="date" name="date" /></label></div>
+                <div><label>Time<input required type="time" name="time" /></label></div>
+                <div><label>Guests<input required type="number" min="1" name="guests" /></label></div>
+                <div><label>Occasion (optional)<input name="occasion" /></label></div>
+              </div>
+              <div class="mt10"><label>Notes<textarea name="notes" rows="3"></textarea></label></div>
+              <div class="btn-row">
+                <button class="btn" type="submit" id="reserveSubmit">Submit</button>
+                <button class="btn alt" type="button" id="exportCSV">Export to CSV</button>
+              </div>
+              <p id="reserveMsg" class="success" role="status" aria-live="polite" hidden>Reservation received! We will confirm shortly. ✅</p>
+              <p class="muted mt6">Demo only. The form stores data locally in your browser. Use the CSV to upload to Google Sheets.</p>
+            </form>
+          </div></div>
+          <div class="card"><div class="pad">
+            <h3 class="mt0">Reach Us</h3>
+            <p>📍 Your City, Bihar</p>
+            <p>☎️ +91 98765 43210</p>
+            <p>✉️ hello@leelas.in</p>
+            <iframe title="Map to restaurant in Patna, Bihar" style="width:100%;height:270px;border:0;border-radius:12px" src="https://maps.google.com/maps?q=Patna%2C%20Bihar&t=&z=12&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+          </div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container foot">
+      <div>
+        <strong>Leela's Sweets & Restaurant</strong>
+        <p class="muted">Multi‑Cuisine • South Indian • Chinese • Bihar Specials • Sweets</p>
+      </div>
+      <div>
+        <p><strong>Timings</strong><br/>Mon–Sun: 8:00 AM – 11:00 PM</p>
+      </div>
+      <div>
+        <p><strong>Follow</strong><br/>Instagram • Facebook</p>
+      </div>
+    </div>
+    <small>© <span id="yr"></span> Leela's Sweets & Restaurant</small>
+  </footer>
+
+  <!-- CART FAB -->
+  <button class="cart-fab" id="cartFab" aria-label="Open cart">🛒 Cart (<span id="cartCount">0</span>)</button>
+  <aside class="cart-panel" id="cartPanel" aria-label="Cart panel" aria-hidden="true">
+    <div class="cart-head">
+      <h3>Your Order</h3>
+      <button class="btn alt" id="closeCart" aria-label="Close cart">Close</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="sticky-cta">
+      <div class="tot-row"><strong>Total</strong><strong id="cartTotal">₹0</strong></div>
+      <button class="btn" id="printBill">Print / Save PDF</button>
+      <button class="btn alt" id="mailOrder">Place Order via Email</button>
+      <button class="btn" id="payNow">Pay Now (Demo)</button>
+    </div>
+  </aside>
+
+  <!-- PAYMENT MODAL -->
+  <div class="modal" id="payModal" aria-hidden="true" role="dialog" aria-labelledby="payTitle">
+    <div class="modal-box">
+      <h3 id="payTitle">Scan & Pay</h3>
+      <p>UPI ID: <strong>leelas@upi</strong></p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=leelas@upi&pn=LeelaRestaurant" alt="UPI QR code for payment" />
+      <div class="btn-col mt10">
+        <button class="btn" type="button" id="mockRazorpay">Pay with Razorpay (Mock)</button>
+        <button class="btn alt" type="button" id="mockPaytm">Pay with Paytm (Mock)</button>
+      </div>
+      <button class="btn link mt10" id="closePay" aria-label="Close payment modal">Close</button>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="./menu.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
